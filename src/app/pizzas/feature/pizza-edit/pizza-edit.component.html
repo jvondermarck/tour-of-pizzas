@@ -1,0 +1,20 @@
+<p>pizza-edit works!</p>
+<ng-container *ngIf="pizza">
+  <h2>{{pizza.name}} {{pizza.price}}</h2>
+  <p>{{pizza.description}}</p>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" value="{{pizza.name}}" [(ngModel)]="pizza.name" placeholder="Pizza's name">
+  </div>
+  <div>
+    <label for="price">Price</label>
+    <input type="number" id="price" [(ngModel)]="pizza.price" placeholder="Pizza's price">
+  </div>
+  <div>
+    <label for="description">Description</label>
+    <textarea id="description" [(ngModel)]="pizza.description" placeholder="Pizza's description"></textarea>
+  </div>
+</ng-container>
+<ng-container *ngIf="!pizza">
+  <p>Pizza not found</p>
+</ng-container>

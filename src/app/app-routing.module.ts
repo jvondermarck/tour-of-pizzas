@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: 'pizza',
     loadChildren: () => import('./pizzas/pizza.module').then(m => m.PizzaModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./public/public.module').then(m => m.PublicModule)
   }
 ];
 
